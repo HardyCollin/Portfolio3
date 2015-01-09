@@ -20,8 +20,17 @@ $("document").ready(function() {
     $("div p:last-child").css("background-color", "blue");
     $("#alertButton").bind("click", alertButtonClick);
     
+    $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('h1').bind('click', mouseClick);
 });
 
 function alertButtonClick() {
     alert("this alert means a button was clicked");
+}
+
+function mouseOverMe(){
+    $("h1").html('this is cool');
+}
+function mouseOutMe () {
+    $('h1').html('it really isnt');
 }

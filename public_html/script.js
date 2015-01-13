@@ -21,7 +21,16 @@ $("document").ready(function() {
     $("#alertButton").bind("click", alertButtonClick);
     
     $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
-    $('h1').bind('click', mouseClick);
+    //$('h1').bind('click', mouseClick);
+    
+    $("button").click(function(){
+    $("div").animate({left:'1400px'});
+  });
+    $('#replaceWText').bind('click', replaceWText);
+    
+    $('#randPara').bind('click', addAPara);
+    
+    $('#removeAPara').bind('click', removeAPara);
 });
 
 function alertButtonClick() {
@@ -33,4 +42,13 @@ function mouseOverMe(){
 }
 function mouseOutMe () {
     $('h1').html('it really isnt');
+}
+function removeAPara(){
+    $('#randPara p:last').remove();
+}
+function addAPara () {
+    $('#randPara').append('<p>ADDED</p>');
+}
+function replaceWText () {
+    $('#replaceWText').text('');
 }

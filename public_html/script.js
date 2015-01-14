@@ -25,12 +25,28 @@ $("document").ready(function() {
     
     $("button").click(function(){
     $("div").animate({left:'1400px'});
+    
+    $("button").click(function(){
+    $("div").animate({right:'1400px'});
+    
+    
+    
+  });
   });
     $('#replaceWText').bind('click', replaceWText);
     
     $('#randPara').bind('click', addAPara);
     
     $('#removeAPara').bind('click', removeAPara);
+    
+    $("#hide").click(function(){
+    $("div").hide();
+  });
+    $("#show").click(function(){
+    $("div").show();
+  });
+
+    
 });
 
 function alertButtonClick() {

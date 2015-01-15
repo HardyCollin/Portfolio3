@@ -23,16 +23,20 @@ $("document").ready(function() {
     $("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     //$('h1').bind('click', mouseClick);
     
-    $("button").click(function(){
-    $("div").animate({left:'1400px'});
+    $('#superHumans').accordion({header: "h3"});
+    $('#superHumans').css('width', '400px');
     
-    $("button").click(function(){
-    $("div").animate({right:'1400px'});
-    
+    $("#uncover").click(function(){
+    $("#blue").animate({right:'1400px'});
+    });
+    $("#cover").click(function(){
+    $("#blue").animate({left:'0px'});
     
     
   });
-  });
+  
+    
+    
     $('#replaceWText').bind('click', replaceWText);
     
     $('#randPara').bind('click', addAPara);
@@ -46,6 +50,7 @@ $("document").ready(function() {
     $("div").show();
   });
 
+    
     
 });
 
